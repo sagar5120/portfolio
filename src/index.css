@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Giga Sans / Inter font setup ─────────────────────────────────────────── */
+@layer base {
+  :root {
+    --font-sans: "Giga Sans", "Inter", system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-300;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-100 dark:bg-slate-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-indigo-500 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-indigo-400;
+  }
+
+  /* Selection */
+  ::selection {
+    @apply bg-indigo-500/30 text-indigo-900 dark:text-indigo-100;
+  }
+}
+
+@layer components {
+  /* ── Glass card ─────────────────────────────────────────────────────────── */
+  .glass-card {
+    @apply bg-white/60 dark:bg-slate-800/60 backdrop-blur-xl border border-white/20 dark:border-slate-700/50 rounded-2xl shadow-xl;
+  }
+
+  /* ── Gradient text ──────────────────────────────────────────────────────── */
+  .gradient-text {
+    @apply bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-600 bg-clip-text text-transparent;
+  }
+
+  /* ── Accent button ──────────────────────────────────────────────────────── */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white
+           bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500
+           shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40
+           transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold
+           border border-slate-200 dark:border-slate-700
+           text-slate-700 dark:text-slate-300
+           hover:border-indigo-400 dark:hover:border-indigo-500
+           hover:text-indigo-600 dark:hover:text-indigo-400
+           hover:bg-indigo-50 dark:hover:bg-indigo-500/10
+           transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  /* ── Section container ──────────────────────────────────────────────────── */
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* ── Section header ─────────────────────────────────────────────────────── */
+  .section-label {
+    @apply inline-block text-xs font-bold tracking-[0.2em] uppercase text-indigo-500 dark:text-indigo-400 mb-2;
+  }
+  .section-title {
+    @apply text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4;
+  }
+  .section-desc {
+    @apply text-slate-500 dark:text-slate-400 text-lg max-w-2xl;
+  }
+
+  /* ── Tag pill ───────────────────────────────────────────────────────────── */
+  .tag-pill {
+    @apply px-3 py-1 text-xs font-semibold rounded-full
+           bg-indigo-100 dark:bg-indigo-500/20
+           text-indigo-700 dark:text-indigo-300
+           border border-indigo-200 dark:border-indigo-500/30;
+  }
+
+  /* ── Nav link ───────────────────────────────────────────────────────────── */
+  .nav-link {
+    @apply relative text-sm font-medium text-slate-600 dark:text-slate-300
+           hover:text-indigo-600 dark:hover:text-indigo-400
+           transition-colors duration-200;
+  }
+
+  /* ── Skill bar ──────────────────────────────────────────────────────────── */
+  .skill-bar-track {
+    @apply h-1.5 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden;
+  }
+  .skill-bar-fill {
+    @apply h-full rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 transition-all duration-1000;
+  }
+}
+
+@layer utilities {
+  /* Animated gradient background */
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-x 8s ease infinite;
+  }
+
+  /* Glow effect */
+  .glow-indigo {
+    box-shadow: 0 0 40px -10px rgba(99, 102, 241, 0.5);
+  }
+
+  /* Noise texture overlay */
+  .noise-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+}
+
+/* ── Keyframes ─────────────────────────────────────────────────────────────── */
+@keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ── Custom input styles ───────────────────────────────────────────────────── */
+.form-input {
+  @apply w-full px-4 py-3 rounded-xl
+         bg-white dark:bg-slate-800
+         border border-slate-200 dark:border-slate-700
+         text-slate-900 dark:text-white
+         placeholder:text-slate-400 dark:placeholder:text-slate-500
+         focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent
+         transition duration-200;
+}
