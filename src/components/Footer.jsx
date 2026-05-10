@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter, Code2, Heart, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Twitter, Facebook, Code2, Heart, ArrowUp } from 'lucide-react';
 import { portfolio } from '../data/portfolio';
 
-const iconMap = { Github, Linkedin, Twitter };
+const iconMap = { Github, Linkedin, Twitter, Facebook };
 
 export default function Footer() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });

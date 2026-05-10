@@ -3,20 +3,31 @@
  * and skills data used throughout the portfolio website.
  */
 
+import reactcertImg from '../assets/reactcert.jpg';
+import mrfresherImg from '../assets/mrfresher.jpg';
+import uiuxImg from '../assets/uiuxcert.jpg';
+import codefestImg from '../assets/codefest.jpg';
+import codefestOrganizerImg from '../assets/codefest_organizer.jpg';
+import techconclaveImg from '../assets/techconclave.jpg';
+import aribtHackathonImg from '../assets/aribt_hackathon.jpg';
+import nabilImg from '../assets/nabil.jpg';
+import contentWriterImg from '../assets/content_writer.jpg';
+
 export const portfolio = {
     // ─── Personal Info ────────────────────────────────────────────────────────
     name: "Sagar Bhandari",
     tagline: "IT Undergraduate | Web Application Developer | Tech Community Leader",
     location: "Bhairahawa, Nepal",
     bio: "Building real-world digital solutions for local problems.",
-    email: "sagarbhandari@example.com",
+    email: "bhandarisagar512@gmail.com",
     availability: "Open to Opportunities",
 
     // ─── Social Links ─────────────────────────────────────────────────────────
     social: [
-        { label: "GitHub", url: "https://github.com/sagarbhandari", icon: "Github" },
-        { label: "LinkedIn", url: "https://linkedin.com/in/sagarbhandari", icon: "Linkedin" },
-        { label: "Twitter", url: "https://twitter.com/sagarbhandari", icon: "Twitter" },
+        { label: "GitHub", url: "https://github.com/sagar5120", icon: "Github" },
+        { label: "LinkedIn", url: "https://www.linkedin.com/in/bsagar512/", icon: "Linkedin" },
+        { label: "Twitter", url: "https://x.com/bsagar512", icon: "Twitter" },
+        { label: "Facebook", url: "https://www.facebook.com/bsagar512", icon: "Facebook" },
     ],
 
     // ─── Navigation Links ─────────────────────────────────────────────────────
@@ -34,17 +45,53 @@ export const portfolio = {
             id: 1,
             role: "Club President",
             org: "BMC IT Club — Bhairahawa Multiple Campus",
+            orgUrl: "https://www.facebook.com/profile.php?id=100094504922018",
             period: "Current",
-            type: "Leadership",
+            type: "Community",
             description:
                 "Leading the BMC IT Club at Bhairahawa Multiple Campus — organising technical workshops, coding contests, and community events that empower students with hands-on skills in software development, networking, and emerging technologies.",
             tags: ["Leadership", "Event Management", "Tech Workshops", "Community"],
             icon: "Code2",
         },
         {
+            id: 6,
+            role: "Sales Manager",
+            org: "Sagarv Hardware and Ply Stores",
+            orgUrl: "https://www.facebook.com/sagarhardware",
+            period: "Past",
+            type: "Work",
+            description:
+                "Managed daily sales operations, customer relationships, and inventory at Sagarv Hardware and Ply Stores.",
+            tags: ["Sales", "Management", "Customer Relations", "Inventory"],
+            icon: "Briefcase",
+        },
+        {
+            id: 7,
+            role: "Program Host — Provincial Phase, Codefest 2025",
+            org: "Code for Change Rupandehi",
+            period: "2025",
+            type: "Community",
+            description: "Successfully hosted the Provincial Phase of Codefest 2025 in Rupandehi, facilitating the event and ensuring a smooth experience for all participants and organizers.",
+            tags: ["Event Hosting", "Public Speaking", "Community Engagement", "Tech Event"],
+            icon: "Users",
+            image: codefestImg,
+        },
+        {
+            id: 11,
+            role: "Content Writer",
+            org: "Coding Olympics Nepal",
+            period: "Past",
+            type: "Community",
+            description: "Served as a content writer for Coding Olympics Nepal — crafting technical articles, problem statements, and educational content for the developer community.",
+            tags: ["Content Writing", "Technical Writing", "Developer Community"],
+            icon: "PenLine",
+            image: contentWriterImg,
+        },
+        {
             id: 2,
             role: "Secretary",
             org: "Neptech Tribe",
+            orgUrl: "https://www.facebook.com/neptechtribe",
             period: "Current",
             type: "Community",
             description:
@@ -56,6 +103,7 @@ export const portfolio = {
             id: 3,
             role: "Community Representative (CR)",
             org: "Code for Change",
+            orgUrl: "https://www.facebook.com/CodeForChangeNepal",
             period: "Past",
             type: "Community",
             description:
@@ -75,15 +123,37 @@ export const portfolio = {
             icon: "BookOpen",
         },
         {
-            id: 5,
-            role: "Program Participant",
-            org: "Nabil School of Social Entrepreneurship",
-            period: "6 Months",
-            type: "Program",
-            description:
-                "Attended the 6-month Nabil School of Social Entrepreneurship program — developing skills in social innovation, entrepreneurial thinking, and building solutions that create meaningful community impact.",
-            tags: ["Social Entrepreneurship", "Innovation", "Community Impact", "Leadership"],
+            id: 8,
+            role: "Event Organizer — Provincial Phase, Codefest 2025",
+            org: "Code for Change Rupandehi",
+            period: "2025",
+            type: "Community",
+            description: "Led the organizational efforts for the Provincial Phase of Codefest 2025, coordinating logistics, managing teams, and executing a successful tech event.",
+            tags: ["Event Management", "Leadership", "Logistics", "Tech Event"],
+            icon: "Users",
+            image: codefestOrganizerImg,
+        },
+        {
+            id: 9,
+            role: "Volunteer",
+            org: "Tech Conclave 2024",
+            period: "Feb 2024",
+            type: "Community",
+            description: "Volunteered at Tech Conclave 2024 in Lumbini Province, contributing to the organization and smooth execution of the grandest tech event in the region.",
+            tags: ["Volunteering", "Event Management", "Community Support", "Tech Event"],
+            icon: "Users",
+            image: techconclaveImg,
+        },
+        {
+            id: 10,
+            role: "Participant",
+            org: "ARIBT Tilottama Hackathon (48 Hours)",
+            period: "Sep 2025",
+            type: "Community",
+            description: "Actively participated in a 48-hour hackathon organized by ARIBT in collaboration with Tilottama Municipality, building impactful solutions and demonstrating strong problem-solving skills.",
+            tags: ["Hackathon", "Problem Solving", "Rapid Prototyping", "Innovation"],
             icon: "Lightbulb",
+            image: aribtHackathonImg,
         },
     ],
 
@@ -207,11 +277,21 @@ export const portfolio = {
             org: "College",
             description: "Recognised as Mr. Fresher — awarded to the standout first-year student demonstrating exceptional talent, personality, and potential among peers.",
             icon: "Trophy",
+            image: mrfresherImg,
         },
     ],
 
     // ─── Certifications ───────────────────────────────────────────────────────
     certifications: [
+        {
+            id: 4,
+            title: "Certificate Course in Social Entrepreneurship",
+            issuer: "Nabil School of Social Entrepreneurship",
+            description: "Successfully completed a certificate course in Social Entrepreneurship, an initiative by Nabil Bank. Learned core concepts of building impactful and sustainable social enterprises.",
+            icon: "Lightbulb",
+            color: "from-green-500 to-emerald-500",
+            image: nabilImg,
+        },
         {
             id: 1,
             title: "React.js Training",
@@ -219,6 +299,7 @@ export const portfolio = {
             description: "Hands-on React.js training covering components, hooks, state management, and building real-world web applications.",
             icon: "Code2",
             color: "from-indigo-500 to-violet-500",
+            image: reactcertImg,
         },
         {
             id: 2,
@@ -227,14 +308,65 @@ export const portfolio = {
             description: "Comprehensive UI/UX training covering design principles, Figma prototyping, user research, and accessibility best practices.",
             icon: "Palette",
             color: "from-pink-500 to-rose-500",
+            image: uiuxImg,
+        },
+    ],
+
+    // ─── Gallery ──────────────────────────────────────────────────────────────
+    gallery: [
+        {
+            id: 1,
+            image: codefestImg,
+            title: "Codefest 2025",
+            description: "Hosting the Provincial Phase of Codefest 2025.",
+        },
+        {
+            id: 2,
+            image: mrfresherImg,
+            title: "Mr. Fresher",
+            description: "Awarded Mr. Fresher at the college welcome program.",
         },
         {
             id: 3,
-            title: "Content Writer",
-            issuer: "Coding Olympics Nepal",
-            description: "Served as a content writer for Coding Olympics Nepal — crafting technical articles, problem statements, and educational content for the developer community.",
-            icon: "PenLine",
-            color: "from-emerald-500 to-teal-500",
+            image: techconclaveImg,
+            title: "Tech Conclave 2024",
+            description: "Volunteering at the grandest tech event in Lumbini.",
         },
+        {
+            id: 4,
+            image: aribtHackathonImg,
+            title: "ARIBT Hackathon",
+            description: "Participating in a 48-hour hackathon.",
+        },
+        {
+            id: 5,
+            image: codefestOrganizerImg,
+            title: "Event Organizing",
+            description: "Organizing efforts for Codefest 2025 logistics.",
+        },
+        {
+            id: 6,
+            image: contentWriterImg,
+            title: "Content Writing",
+            description: "Crafting technical articles for Coding Olympics.",
+        },
+        {
+            id: 7,
+            image: reactcertImg,
+            title: "React.js Training",
+            description: "Hands-on React.js training covering modern web development.",
+        },
+        {
+            id: 8,
+            image: uiuxImg,
+            title: "UI/UX Design",
+            description: "Comprehensive UI/UX training covering design principles.",
+        },
+        {
+            id: 9,
+            image: nabilImg,
+            title: "Social Entrepreneurship",
+            description: "Completed a certificate course by Nabil Bank.",
+        }
     ],
 };

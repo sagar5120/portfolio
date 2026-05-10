@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, MapPin, Sparkles, Github, Linkedin, Twitter, Download } from 'lucide-react';
+import { ArrowDown, MapPin, Sparkles, Github, Linkedin, Twitter, Facebook, Download } from 'lucide-react';
 import { portfolio } from '../data/portfolio';
 
-const iconMap = { Github, Linkedin, Twitter };
+const iconMap = { Github, Linkedin, Twitter, Facebook };
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },

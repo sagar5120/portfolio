@@ -7,10 +7,10 @@ import Timeline from './components/Timeline';
 import Projects from './components/Projects';
 import TechStack from './components/TechStack';
 import ContactForm from './components/ContactForm';
-import AwardsAndCerts from './components/AwardsAndCerts';
 import Footer from './components/Footer';
+import Gallery from './components/Gallery';
 import { portfolio } from './data/portfolio';
-import { MapPin, Users, Sparkles, School } from 'lucide-react';
+import { MapPin, Users, Sparkles, School, Store } from 'lucide-react';
 
 // ── About Section (inline, lightweight) ─────────────────────────────────────
 function About() {
@@ -35,21 +35,21 @@ function About() {
               <span className="text-indigo-500 font-semibold">{portfolio.location}</span>. I thrive at the intersection of clean design and performant code.
             </p>
             <p className="text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
-              As <strong className="text-slate-800 dark:text-slate-200">Club President of BMC IT Club</strong> at Bhairahawa Multiple Campus, <strong className="text-slate-800 dark:text-slate-200">Secretary at Neptech Tribe</strong>, and former <strong className="text-slate-800 dark:text-slate-200">CR at Code for Change</strong>, I'm committed to growing Nepal's developer ecosystem through mentorship, collaboration, and real-world impact.
+              As <strong className="text-slate-800 dark:text-slate-200">Club President of <a href="https://www.facebook.com/profile.php?id=100094504922018" target="_blank" rel="noopener noreferrer" className="hover:underline text-indigo-600 dark:text-indigo-400">BMC IT Club</a></strong> at Bhairahawa Multiple Campus, <strong className="text-slate-800 dark:text-slate-200">Secretary at <a href="https://www.facebook.com/neptechtribe" target="_blank" rel="noopener noreferrer" className="hover:underline text-violet-600 dark:text-violet-400">Neptech Tribe</a></strong>, and <strong className="text-slate-800 dark:text-slate-200">Sales Manager at <a href="https://www.facebook.com/sagarhardware" target="_blank" rel="noopener noreferrer" className="hover:underline text-emerald-600 dark:text-emerald-400">Sagar Hardware and Ply Stores</a></strong>, I'm committed to growing Nepal's developer ecosystem through mentorship, collaboration, and real-world impact.
             </p>
             <div className="flex flex-wrap gap-3">
-              <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-200/60 dark:border-indigo-500/20">
+              <a href="https://www.facebook.com/profile.php?id=100094504922018" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-200/60 dark:border-indigo-500/20 hover:scale-105 transition-transform cursor-pointer">
                 <School className="w-4 h-4 text-indigo-500" />
                 <span className="text-sm font-semibold text-indigo-700 dark:text-indigo-300">BMC IT Club</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-violet-50 dark:bg-violet-500/10 border border-violet-200/60 dark:border-violet-500/20">
+              </a>
+              <a href="https://www.facebook.com/neptechtribe" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-xl bg-violet-50 dark:bg-violet-500/10 border border-violet-200/60 dark:border-violet-500/20 hover:scale-105 transition-transform cursor-pointer">
                 <Users className="w-4 h-4 text-violet-500" />
                 <span className="text-sm font-semibold text-violet-700 dark:text-violet-300">Neptech Tribe</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200/60 dark:border-emerald-500/20">
-                <Sparkles className="w-4 h-4 text-emerald-500" />
-                <span className="text-sm font-semibold text-emerald-700 dark:text-emerald-300">Code for Change</span>
-              </div>
+              </a>
+              <a href="https://www.facebook.com/sagarhardware" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200/60 dark:border-emerald-500/20 hover:scale-105 transition-transform cursor-pointer">
+                <Store className="w-4 h-4 text-emerald-500" />
+                <span className="text-sm font-semibold text-emerald-700 dark:text-emerald-300">Sagar Hardware</span>
+              </a>
             </div>
           </motion.div>
 
@@ -107,7 +107,7 @@ export default function App() {
         <Timeline />
         <Projects />
         <TechStack />
-        <AwardsAndCerts />
+        <Gallery />
         <ContactForm />
       </main>
       <Footer />
